@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 
 const MyModel=({closeModel})=>{
+    
     /////agr hm pop-up k sath scrol ni chate
     useEffect(()=>{
         document.body.style.overflowY="hidden";
