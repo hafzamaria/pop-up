@@ -11,8 +11,9 @@ const Model = () => {
     return (
       <>
     
-        <button onClick={()=>setShowModel(true)}>Open Modal</button>
+        <button className='modal-btn' onClick={()=>setShowModel(true)}>Open Modal</button>
         {showModel && <MyModel closeModel={closeModel}/>}
+       
      
       </>
     )
