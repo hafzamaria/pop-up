@@ -1,24 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import MyModel from './MyModel';
 
 const Model = () => {
     const [showModel, setShowModel] = useState(false);
 
-    const MyModel=()=>{
-      return(
-        <>
-          <h1>STAY TUNED</h1>
-        <p>Subscribe to our newsletter and never miss our designs,latest news etc.
-          Our newsletter is sent once a week ,every Monday
-        </p>
-        <button onClick={()=>setShowModel(false)}>Accept it</button>
-        </>
-      )
+    const closeModel=()=>{
+        setShowModel(false);
     }
+
     return (
       <>
     
         <button onClick={()=>setShowModel(true)}>Open Modal</button>
-        {showModel && <MyModel/>}
+        {showModel && <MyModel closeModel={closeModel}/>}
      
       </>
     )
