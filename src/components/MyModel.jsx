@@ -1,8 +1,9 @@
 import React from 'react'
 import { useEffect } from 'react';
+import  ReactDOM  from 'react-dom';
 
 const MyModel=({closeModel})=>{
-    
+
     /////agr hm pop-up k sath scrol ni chate
     useEffect(()=>{
         document.body.style.overflowY="hidden";
@@ -11,7 +12,7 @@ const MyModel=({closeModel})=>{
         };
     
     },[]);
-    return(
+    return ReactDOM.createPortal(
       <>
       {/* //model-wrapper div pe onclick se page pe kahi b clik karege tu pop-up close ho jaega */}
       <div className="modal-wrapper" onClick={closeModel}></div>
@@ -22,7 +23,8 @@ const MyModel=({closeModel})=>{
       </p>
       <button className='modal-btn' onClick={closeModel}>Accept it</button>
       </div>
-      </>
+      </>,
+      document.querySelector(".myPortalModalDiv")
     )
   }
 
