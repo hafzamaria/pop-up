@@ -18,7 +18,7 @@ const MyModel=({closeModel})=>{
       <div className="modal-wrapper" onClick={closeModel}></div>
       <div className="modal-container">
         <h1>STAY TUNED</h1>
-      <p>Subscribe to our newsletter and never miss our designs,latest news etc.
+      <p className='model-para'>Subscribe to our newsletter and never miss our designs,latest news etc.
         Our newsletter is sent once a week ,every Monday
       </p>
       <button className='modal-btn' onClick={closeModel}>Accept it</button>
