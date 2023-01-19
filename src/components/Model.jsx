@@ -11,7 +11,7 @@ const Model = () => {
 
     return (
       <>
-    
+    <div className="main-container">
         <button className='modal-btn' onClick={()=>setShowModel(true)}>Open Modal</button>
         {showModel && <MyModel closeModel={closeModel}/>}
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -69,7 +69,7 @@ const Model = () => {
              amet error aut modi numquam accusamus expedita quae repellendus repudiandae, animi quo!</p>
              <br/>
              <br/>
-     
+             </div>
       </>
     )
 }
